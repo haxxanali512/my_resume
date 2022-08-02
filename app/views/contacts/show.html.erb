@@ -1,0 +1,34 @@
+<h2 class="mt-5">Showing <%= @contact.name %></h2>
+
+<div class="mt-5">
+  <p>
+    <span>Sender:</span>
+    <%= mail_to(@contact.email) %>
+  </p>
+
+  <p>
+    <span>Receiver:</span>
+   haxxanali512@gmail.com
+  </p>
+
+  <div class="text-center">
+    <h4><%= @contact.subject %></h4>
+
+  </div>
+
+  <p class="me-5 mt-5">
+    <strong>Message:</strong>
+    <%= @contact.message %>
+  </p>
+
+  <p class="float-end me-5 mt-2">
+    <strong>Thank You!</strong>
+  </p>
+
+</div>
+
+<div>
+  <%= link_to 'Edit', edit_contact_path(@contact) %> |
+  <%= link_to 'Back', contacts_path %>
+
+</div>
